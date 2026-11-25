@@ -45,6 +45,8 @@ document.addEventListener("DOMContentLoaded", () => {
     initCategoryFilters();
     initScrollToTop();
     initMobileNavClose();
+    initScrollReveal();
+    checkUrlSearchParam();
 });
 
 // ==========================================================================
@@ -56,12 +58,15 @@ function initWelcomeScreen() {
 
     if (!welcomeScreen || !btnEnter) return;
 
-    btnEnter.addEventListener("click", () => {
+    btnEnter.addEventListener("click", (e) => {
+        e.preventDefault();
         welcomeScreen.classList.add("hide-welcome");
         document.body.classList.remove("welcome-locked");
+        
+        // Arahkan mulus ke beranda.html setelah animasi transisi
         setTimeout(() => {
-            welcomeScreen.style.display = "none";
-        }, 650);
+            window.location.href = "beranda.html";
+        }, 350);
     });
 }
 
@@ -88,9 +93,13 @@ function enterSiteFromStory() {
     if (welcomeScreen && !welcomeScreen.classList.contains("hide-welcome")) {
         welcomeScreen.classList.add("hide-welcome");
         document.body.classList.remove("welcome-locked");
+    }
+
+    const path = window.location.pathname;
+    if (path.endsWith("index.html") || path.endsWith("/")) {
         setTimeout(() => {
-            welcomeScreen.style.display = "none";
-        }, 650);
+            window.location.href = "beranda.html";
+        }, 350);
     }
 }
 
@@ -220,12 +229,21 @@ function goToSearchResult(titleText) {
     if (resultsBox) resultsBox.classList.add("d-none");
 
     const productCards = document.querySelectorAll(".product-card-item");
+    let foundCard = null;
+
     productCards.forEach((card) => {
         const titleElem = card.querySelector("h5, h4");
-        if (titleElem && titleElem.textContent.trim() === titleText.trim()) {
-            highlightAndScrollTo(card);
+        if (titleElem && titleElem.textContent.trim().toLowerCase().includes(titleText.trim().toLowerCase())) {
+            foundCard = card;
         }
     });
+
+    if (foundCard) {
+        highlightAndScrollTo(foundCard);
+    } else {
+        // Jika sedang di halaman lain (beranda, tentang, kontak, kalkulator), arahkan ke produk.html
+        window.location.href = `produk.html?search=${encodeURIComponent(titleText)}`;
+    }
 }
 
 function highlightAndScrollTo(element) {
@@ -236,12 +254,30 @@ function highlightAndScrollTo(element) {
     }, 2500);
 }
 
+// Cek parameter ?search= di URL saat halaman dimuat (untuk navigasi pencarian antar halaman)
+function checkUrlSearchParam() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchTarget = urlParams.get("search");
+    if (!searchTarget) return;
+
+    setTimeout(() => {
+        const productCards = document.querySelectorAll(".product-card-item");
+        productCards.forEach((card) => {
+            const titleElem = card.querySelector("h5, h4");
+            if (titleElem && titleElem.textContent.trim().toLowerCase().includes(searchTarget.trim().toLowerCase())) {
+                highlightAndScrollTo(card);
+            }
+        });
+    }, 400);
+}
+
 // ==========================================================================
 // 2. FILTER KATEGORI CEPAT
 // ==========================================================================
 function initCategoryFilters() {
     const filterButtons = document.querySelectorAll(".btn-filter");
     const sections = document.querySelectorAll(".product-section");
+    if (!filterButtons.length) return;
 
     filterButtons.forEach((btn) => {
         btn.addEventListener("click", () => {
@@ -270,15 +306,21 @@ function initCategoryFilters() {
 // 3. KALKULATOR ESTIMASI BIAYA CETAK
 // ==========================================================================
 function initCalculator() {
+    const serviceTypeElem = document.getElementById("calcServiceType");
+    if (!serviceTypeElem) return;
     updateCalcFields();
     calculatePrice();
 }
 
 function updateCalcFields() {
-    const serviceType = document.getElementById("calcServiceType").value;
+    const serviceTypeElem = document.getElementById("calcServiceType");
+    if (!serviceTypeElem) return;
+    const serviceType = serviceTypeElem.value;
     const materialSelect = document.getElementById("calcMaterial");
     const balihoSizeInputs = document.getElementById("balihoSizeInputs");
     const a3QuantityInput = document.getElementById("a3QuantityInput");
+
+    if (!materialSelect) return;
 
     // Populate materials
     materialSelect.innerHTML = "";
@@ -294,20 +336,25 @@ function updateCalcFields() {
 
     // Toggle input types
     if (serviceType === "a3") {
-        balihoSizeInputs.classList.add("d-none");
-        a3QuantityInput.classList.remove("d-none");
+        if (balihoSizeInputs) balihoSizeInputs.classList.add("d-none");
+        if (a3QuantityInput) a3QuantityInput.classList.remove("d-none");
     } else {
-        balihoSizeInputs.classList.remove("d-none");
-        a3QuantityInput.classList.add("d-none");
+        if (balihoSizeInputs) balihoSizeInputs.classList.remove("d-none");
+        if (a3QuantityInput) a3QuantityInput.classList.add("d-none");
     }
 
     calculatePrice();
 }
 
 function calculatePrice() {
-    const serviceType = document.getElementById("calcServiceType").value;
+    const serviceTypeElem = document.getElementById("calcServiceType");
+    if (!serviceTypeElem) return;
+    const serviceType = serviceTypeElem.value;
     const materialSelect = document.getElementById("calcMaterial");
-    const designFee = parseInt(document.getElementById("calcDesignFee").value, 10) || 0;
+    if (!materialSelect) return;
+
+    const designFeeElem = document.getElementById("calcDesignFee");
+    const designFee = designFeeElem ? (parseInt(designFeeElem.value, 10) || 0) : 0;
     const priceDisplay = document.getElementById("totalPriceDisplay");
     const detailDisplay = document.getElementById("calcSummaryDetail");
 
@@ -485,4 +532,29 @@ function escapeHtml(string) {
             "'": "&#39;"
         }[s];
     });
+}
+
+// Inisialisasi Efek Animasi Fade-in on Scroll
+function initScrollReveal() {
+    const revealElements = document.querySelectorAll(".reveal-scroll");
+    if (!revealElements.length) return;
+
+    if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("is-visible");
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.08,
+            rootMargin: "0px 0px -30px 0px"
+        });
+
+        revealElements.forEach((el) => observer.observe(el));
+    } else {
+        // Fallback untuk browser lawas tanpa IntersectionObserver
+        revealElements.forEach((el) => el.classList.add("is-visible"));
+    }
 }

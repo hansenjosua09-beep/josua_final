@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Produk & Layanan - Sigma Printing Manado (Paal 2)</title>
+    
+    <!-- Meta SEO -->
+    <meta name="description" content="Katalog harga dan spesifikasi cetak Baliho, Spanduk, Kertas A3+, Stiker Vinyl, serta Cetak Indoor & Outdoor di Sigma Printing Paal 2, Manado.">
+    <meta name="keywords" content="Cetak Baliho Manado, Cetak Stiker A3 Manado, Percetakan Outdoor Manado, Sigma Printing Katalog">
+
+    <!-- Google Fonts: Poppins & Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons & FontAwesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="90" tabindex="0">
+
+    <!-- ==========================================
+         TOP BAR INFO
+         ========================================== -->
+    <div class="top-bar py-2 text-white d-none d-md-block">
+        <div class="container-fluid px-3 px-xl-4 px-xxl-5 d-flex justify-content-between align-items-center">
+            <div class="top-info d-flex align-items-center gap-3">
+                <span><i class="bi bi-geo-alt-fill text-danger me-1"></i> Paal 2, Manado</span>
+                <span class="top-bar-divider"></span>
+                <span><i class="bi bi-clock-fill text-danger me-1"></i> 09.00 - 19.00 WITA</span>
+                <span class="top-bar-divider"></span>
+                <button type="button" class="creator-badge-btn" onclick="openCreatorStory()" title="Lihat Cerita Pembuat Website">
+                    <i class="bi bi-person-badge-fill text-danger me-1"></i> Pembuat: <strong>Josua Hansen Lontoh (105022510007)</strong>
+                </button>
+            </div>
+            <div class="top-contact d-flex align-items-center gap-3">
+                <span><i class="bi bi-telephone-fill text-danger me-1"></i> +62 852-9876-5432</span>
+                <span class="top-bar-divider"></span>
+                <a href="javascript:void(0)" onclick="showFormalityNotice('WhatsApp')" class="top-wa-badge text-decoration-none">
+                    <i class="bi bi-whatsapp me-1"></i> Chat WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         NAVBAR UTAMA (MULTI-PAGE LINKED)
+         ========================================== -->
+    <nav id="mainNavbar" class="navbar navbar-expand-xl navbar-dark sticky-top">
+        <div class="container-fluid px-3 px-xl-4 px-xxl-5">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="beranda.html">
+                <span class="brand-badge">
+                    <img src="images/logo.png" alt="Sigma Printing Logo" class="brand-logo-img">
+                </span>
+                <div class="brand-text">
+                    <span class="brand-title">SIGMA<span class="text-danger">PRINTING</span></span>
+                    <span class="brand-subtitle d-block">MANADO - PAAL 2</span>
+                </div>
+            </a>
+
+            <button class="navbar-toggler custom-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-xl-0 align-items-xl-center gap-xl-1">
+                    <li class="nav-item">
+                        <a class="nav-link" href="beranda.html"><i class="bi bi-house-door me-1"></i> Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tentang.html"><i class="bi bi-info-circle me-1"></i> Tentang Kami</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="produk.html" id="produkDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-grid-fill me-1"></i> Produk & Layanan
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark custom-dropdown shadow-lg" aria-labelledby="produkDropdown">
+                            <li class="dropdown-header text-uppercase text-danger fw-bold">Katalog Produk Percetakan</li>
+                            <li>
+                                <a class="dropdown-item" href="#produk-baliho">
+                                    <i class="bi bi-signpost-2 text-danger me-2"></i> Baliho & Spanduk Banner
+                                    <span class="badge bg-danger ms-auto">Outdoor</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#produk-kertas-a3">
+                                    <i class="bi bi-file-earmark-image text-danger me-2"></i> Kertas A3+ Digital Printing
+                                    <span class="badge bg-secondary ms-auto">Stiker</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#produk-outdoor-indoor">
+                                    <i class="bi bi-aspect-ratio text-danger me-2"></i> Cetak Outdoor & Indoor
+                                    <span class="badge bg-warning text-dark ms-auto">High-Res</span>
+                                </a>
+                            </li>
+                            <li><hr class="dropdown-divider border-secondary my-2"></li>
+                            <li>
+                                <a class="dropdown-item" href="kalkulator.html">
+                                    <i class="bi bi-calculator-fill text-danger me-2"></i> Kalkulator Estimasi Biaya
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="javascript:void(0)" onclick="openCreatorStory()">
+                                    <i class="bi bi-chat-quote-fill text-danger me-2"></i> Cerita Pembuat (Josua)
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="kalkulator.html"><i class="bi bi-calculator me-1"></i> Hitung Biaya</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kontak.html"><i class="bi bi-geo-alt me-1"></i> Kontak</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link creator-nav-link" href="javascript:void(0)" onclick="openCreatorStory()" title="Cerita Latar Belakang Pembuat Website">
+                            <i class="bi bi-chat-quote-fill text-danger me-1"></i> Cerita Pembuat
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="nav-actions d-flex flex-column flex-xl-row align-items-stretch align-items-xl-center gap-2 mt-3 mt-xl-0">
+                    <div class="nav-search-wrapper position-relative">
+                        <form class="d-flex m-0" role="search" onsubmit="event.preventDefault(); triggerSearch();">
+                            <div class="input-group search-input-group">
+                                <input id="navbarSearchInput" class="form-control search-input" type="search" placeholder="Cari produk cetak..." aria-label="Search">
+                                <button class="btn btn-search text-white" type="button" onclick="triggerSearch()" title="Cari Produk">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                        <div id="searchResultsBox" class="search-results-dropdown shadow d-none"></div>
+                    </div>
+
+                    <a href="kalkulator.html" class="btn btn-custom-accent nav-cta-btn anim-pulse">
+                        <i class="bi bi-cart-plus-fill me-1"></i> Order Sekarang
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==========================================
+         PAGE HERO BANNER
+         ========================================== -->
+    <div class="page-hero-banner text-center text-white">
+        <div class="container">
+            <div class="breadcrumb-custom mb-3 justify-content-center">
+                <a href="beranda.html"><i class="bi bi-house-door me-1"></i> Beranda</a>
+                <span>/</span>
+                <span class="text-danger fw-semibold">Produk & Layanan</span>
+            </div>
+            <h1 class="page-title mb-2">KATALOG PRODUK <span class="text-danger">SIGMA PRINTING</span></h1>
+            <p class="text-secondary mx-auto mb-0" style="max-width: 650px;">
+                Pilihan lengkap percetakan baliho outdoor, digital offset kertas A3+ aneka stiker, dan cetak indoor presisi tinggi di Paal 2, Manado.
+            </p>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         FILTER KATEGORI CEPAT
+         ========================================== -->
+    <div class="category-filter-bar py-3 bg-dark-card border-bottom border-secondary sticky-top" style="top: 70px; z-index: 1020;">
+        <div class="container">
+            <div class="d-flex justify-content-center flex-wrap gap-2">
+                <button class="btn btn-filter active" data-filter="all">
+                    <i class="bi bi-collection-fill me-1"></i> Semua Produk
+                </button>
+                <button class="btn btn-filter" data-filter="baliho">
+                    <i class="bi bi-signpost-2-fill me-1"></i> Baliho & Spanduk
+                </button>
+                <button class="btn btn-filter" data-filter="kertas-a3">
+                    <i class="bi bi-file-earmark-image-fill me-1"></i> Kertas A3+ & Stiker
+                </button>
+                <button class="btn btn-filter" data-filter="outdoor-indoor">
+                    <i class="bi bi-aspect-ratio-fill me-1"></i> Metode Cetak Khusus
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         SEKSI 1: BALIHO & SPANDUK DENGAN UKURAN & JASA DESAIN
+         ========================================== -->
+    <section id="produk-baliho" class="py-5 product-section reveal-scroll" data-category="baliho">
+        <div class="container">
+            <div class="section-title-wrap mb-4">
+                <span class="badge bg-danger text-uppercase mb-2">Pilihan Spanduk & Baliho</span>
+                <h2 class="fw-bold text-white section-title">Cetak Baliho & Spanduk Outdoor</h2>
+                <div class="title-underline"></div>
+                <p class="text-secondary mt-2">
+                    Harga dihitung per meter persegi (m²) tergantung ketebalan bahan dan ukuran. Dilengkapi opsi layanan jasa desain grafis jika belum memiliki file siap cetak.
+                </p>
+            </div>
+
+            <!-- TABEL JASA DESAIN INFO -->
+            <div class="design-service-card mb-4 p-4 text-white">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h5 class="fw-bold text-danger mb-2"><i class="bi bi-pencil-square me-2"></i>Biaya Jasa Desain Grafis (Opsional)</h5>
+                        <p class="small text-light mb-2">
+                            Punya file siap cetak (PDF/TIFF/JPG resolusi 300dpi)? <strong>Gratis biaya desain (Rp 0)</strong>! Bila membutuhkan jasa desain kami:
+                        </p>
+                        <div class="row g-2 small text-secondary">
+                            <div class="col-sm-4">
+                                <span class="badge bg-dark border border-secondary text-light w-100 p-2">
+                                    Desain Ringan/Teks: <strong>Rp 15.000 - Rp 25.000</strong>
+                                </span>
+                            </div>
+                            <div class="col-sm-4">
+                                <span class="badge bg-dark border border-secondary text-light w-100 p-2">
+                                    Desain Custom/Promosi: <strong>Rp 35.000 - Rp 50.000</strong>
+                                </span>
+                            </div>
+                            <div class="col-sm-4">
+                                <span class="badge bg-dark border border-secondary text-light w-100 p-2">
+                                    Revisi: <strong>Hingga 3x Revisi</strong>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+                        <a href="kalkulator.html" class="btn btn-sm btn-custom-accent">
+                            <i class="bi bi-calculator me-1"></i> Hitung Biaya + Desain
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GRID PRODUK BALIHO -->
+            <div class="row g-4">
+                <!-- Card Baliho 1 -->
+                <div class="col-md-6 col-lg-4 product-card-item" data-title="baliho flexi standar 280gr spanduk">
+                    <div class="product-card h-100 shadow card-hover-effect">
+                        <div class="product-img-holder position-relative">
+                            <img src="images/Flexi280g.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?auto=format&fit=crop&w=600&q=80';" alt="Contoh Baliho Standar" class="img-fluid w-100">
+                            <div class="img-placeholder-tag"><i class="bi bi-image"></i> Flexi Standar 280g</div>
+                            <span class="badge-price-tag">Mulai Rp 18.000 / m²</span>
+                        </div>
+                        <div class="card-body p-4 text-white">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-danger">Bahan Flexi 280gr</span>
+                                <small class="text-secondary"><i class="bi bi-clock"></i> 2 - 4 Jam Jadi</small>
+                            </div>
+                            <h5 class="fw-bold mb-2">Spanduk / Baliho Standar</h5>
+                            <p class="text-secondary small mb-3">
+                                Cocok untuk spanduk event singkat, ucapan selamat datang, spanduk perayaan, atau promosi usaha kuliner.
+                            </p>
+                            
+                            <ul class="list-unstyled small mb-3 text-light">
+                                <li><i class="bi bi-check2-circle text-danger me-2"></i> Ukuran Populer: 2x1m, 3x1m, 4x1m</li>
+                                <li><i class="bi bi-check2-circle text-danger me-2"></i> Finishing: Mata ayam (lubang ring) / Slongsong</li>
+                                <li><i class="bi bi-check2-circle text-danger me-2"></i> Jasa Desain: +Rp 20.000 (opsional)</li>
+                            </ul>
+
+                            <div class="border-top border-secondary pt-3 d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="text-secondary small d-block">Estimasi Uk. 3x1 m:</span>
+                                    <span class="fw-bold text-danger fs-6">Rp 54.000</span>
+                                </div>
+                                <button class="btn btn-sm btn-custom-outline" onclick="openOrderModal('Baliho Flexi 280gr', 'Rp 18.000 / m²', 'Outdoor Flexi 280gr')">
+                                    <i class="bi bi-cart me-1"></i> Pesan
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Baliho 2 -->
+                <div class="col-md-6 col-lg-4 product-card-item" data-title="baliho flexi tebal 340gr banner awet">
+                    <div class="product-card h-100 shadow featured-card card-hover-effect">
+                        <div class="badge-favorite">TERLARIS</div>
+                        <div class="product-img-holder position-relative">
+                            <img src="images/Flexi340g.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=600&q=80';" alt="Contoh Baliho Tebal 340gr" class="img-fluid w-100">
+                            <div class="img-placeholder-tag"><i class="bi bi-image"></i> Flexi Tebal 340g</div>
+                            <span class="badge-price-tag">Mulai Rp 25.000 / m²</span>
+                        </div>
+                        <div class="card-body p-4 text-white">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-danger">Bahan Flexi 340gr (Sedang)</span>
+                                <small class="text-secondary"><i class="bi bi-shield-check"></i> Lebih Awet</small>
+                            </div>
+                            <h5 class="fw-bold mb-2">Baliho Tebal Sedang (Higain)</h5>
+                            <p class="text-secondary small mb-3">
+                                Serat lebih padat dan tidak mudah robek terkena hembusan angin kencang. Pilihan ideal untuk papan nama toko dan promosi bulanan.
+                            </p>
+                            
+                            <ul class="list-unstyled small mb-3 text-light">
+                                <li><i class="bi bi-check2-circle text-danger me-2"></i> Ukuran Populer: 3x2m, 4x2m, 5x2m</li>
+                                <li><i class="bi bi-check2-circle text-danger me-2"></i> Tahan panas & hujan 6 - 12 bulan</li>
+                                <li><i class="bi bi-check2-circle text-danger me-2"></i> Jasa Desain: +Rp 25.000 - Rp 35.000</li>
+                            </ul>
+
+                            <div class="border-top border-secondary pt-3 d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="text-secondary small d-block">Estimasi Uk. 4x1.5 m:</span>
+                                    <span class="fw-bold text-danger fs-6">Rp 150.000</span>
+                                </div>
+                                <button class="btn btn-sm btn-custom-accent" onclick="openOrderModal('Baliho Flexi 340gr', 'Rp 25.000 / m²', 'Outdoor Flexi 340gr')">
+                                    <i class="bi bi-cart me-1"></i> Pesan
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Baliho 3 -->
+                <div class="col-md-6 col-lg-4 product-card-item" data-title="baliho korea 440gr tebal premium billboard">
+                    <div class="product-card h-100 shadow card-hover-effect">
+                        <div class="product-img-holder position-relative">
+                            <img src="images/Flexikorea.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=600&q=80';" alt="Contoh Baliho Korea 440gr" class="img-fluid w-100">
+                            <div class="img-placeholder-tag"><i class="bi bi-image"></i> Flexi Korea 440g</div>
+                            <span class="badge-price-tag">Mulai Rp 45.000 / m²</span>
+                        </div>
+                        <div class="card-body p-4 text-white">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-warning text-dark">Flexi Korea 440gr (Premium)</span>
+                                <small class="text-secondary"><i class="bi bi-gem"></i> Hasil Matte Halus</small>
+                            </div>
+                            <h5 class="fw-bold mb-2">Baliho Premium Korea 440gr</h5>
+                            <p class="text-secondary small mb-3">
+                                Bahan doff premium tanpa kilap berlebih. Sangat kokoh untuk billboard permanen, panggung konser, dan promosi jangka panjang.
+                            </p>
+                            
+                            <ul class="list-unstyled small mb-3 text-light">
+                                <li><i class="bi bi-check2-circle text-danger me-2"></i> Ukuran Custom hingga 6x4m / 8x3m</li>
+                                <li><i class="bi bi-check2-circle text-danger me-2"></i> Tahan lebih dari 1 tahun di outdoor</li>
+                                <li><i class="bi bi-check2-circle text-danger me-2"></i> Jasa Desain: +Rp 35.000 - Rp 50.000</li>
+                            </ul>
+
+                            <div class="border-top border-secondary pt-3 d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="text-secondary small d-block">Estimasi Uk. 5x3 m:</span>
+                                    <span class="fw-bold text-danger fs-6">Rp 675.000</span>
+                                </div>
+                                <button class="btn btn-sm btn-custom-outline" onclick="openOrderModal('Baliho Flexi Korea 440gr', 'Rp 45.000 / m²', 'Outdoor Flexi Korea')">
+                                    <i class="bi bi-cart me-1"></i> Pesan
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SEKSI 2: PERCETAKAN KERTAS A3+ DENGAN VARIASI BAHAN
+         ========================================== -->
+    <section id="produk-kertas-a3" class="py-5 bg-darker-base product-section reveal-scroll" data-category="kertas-a3">
+        <div class="container">
+            <div class="section-title-wrap mb-4">
+                <span class="badge bg-danger text-uppercase mb-2">Digital Print A3+</span>
+                <h2 class="fw-bold text-white section-title">Cetak Kertas A3+ Aneka Bahan</h2>
+                <div class="title-underline"></div>
+                <p class="text-secondary mt-2">
+                    Cetak lembaran ukuran 32 x 48 cm (A3+) dengan mesin laser toner beresolusi tajam. Harga berbeda sesuai material bahan (kertas brosur, karton tebal, stiker kromo, vinyl tahan air).
+                </p>
+            </div>
+
+            <!-- GRID BAHAN KERTAS A3 -->
+            <div class="row g-4">
+                <!-- A3 Item 1: Stiker Kromo -->
+                <div class="col-md-6 col-lg-3 product-card-item" data-title="cetak stiker cromo kromo a3 kemasan label">
+                    <div class="product-card h-100 shadow card-hover-effect">
+                        <div class="product-img-holder position-relative">
+                            <img src="images/StikerCromo.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=500&q=80';" alt="Stiker Cromo A3+" class="img-fluid w-100">
+                            <div class="img-placeholder-tag"><i class="bi bi-image"></i> Stiker Cromo A3+</div>
+                            <span class="badge-price-tag">Rp 8.000 / lbr</span>
+                        </div>
+                        <div class="card-body p-3 text-white">
+                            <span class="badge bg-secondary mb-1">Stiker Kertas Glossy</span>
+                            <h5 class="fw-bold mb-1">Stiker Cromo A3+</h5>
+                            <p class="text-secondary small mb-2">
+                                Pilihan ekonomis untuk label makanan kering, toples kue, stiker box pengiriman, dan logo kemasan.
+                            </p>
+                            <div class="bg-black p-2 rounded small mb-3 border border-secondary">
+                                <div class="d-flex justify-content-between">
+                                    <span class="text-muted">Cetak Saja:</span>
+                                    <strong class="text-white">Rp 8.000/lbr</strong>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span class="text-muted">+ Kiss Cut (Pola):</span>
+                                    <strong class="text-danger">+Rp 5.000/lbr</strong>
+                                </div>
+                            </div>
+                            <button class="btn btn-sm btn-custom-outline w-100" onclick="openOrderModal('Stiker Cromo A3+', 'Rp 8.000 / lembar', 'Kertas A3+')">
+                                <i class="bi bi-cart me-1"></i> Pesan Bahan Ini
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- A3 Item 2: Stiker Vinyl (Waterproof) -->
+                <div class="col-md-6 col-lg-3 product-card-item" data-title="cetak stiker vinyl a3 anti air waterproof minuman frozen">
+                    <div class="product-card h-100 shadow featured-card card-hover-effect">
+                        <div class="badge-favorite">ANTI AIR</div>
+                        <div class="product-img-holder position-relative">
+                            <img src="images/StikerVinyl.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=500&q=80';" alt="Stiker Vinyl Waterproof" class="img-fluid w-100">
+                            <div class="img-placeholder-tag"><i class="bi bi-image"></i> Stiker Vinyl A3+</div>
+                            <span class="badge-price-tag">Rp 12.000 / lbr</span>
+                        </div>
+                        <div class="card-body p-3 text-white">
+                            <span class="badge bg-danger mb-1">Stiker Sintetis Plastik</span>
+                            <h5 class="fw-bold mb-1">Stiker Vinyl Waterproof</h5>
+                            <p class="text-secondary small mb-2">
+                                Bahan dasar plastik elastis tahan air, beku, dan minyak. Cocok untuk botol kopi, frozen food, dan kosmetik.
+                            </p>
+                            <div class="bg-black p-2 rounded small mb-3 border border-secondary">
+                                <div class="d-flex justify-content-between">
+                                    <span class="text-muted">Cetak Saja:</span>
+                                    <strong class="text-white">Rp 12.000/lbr</strong>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span class="text-muted">+ Kiss Cut (Pola):</span>
+                                    <strong class="text-danger">+Rp 5.000/lbr</strong>
+                                </div>
+                            </div>
+                            <button class="btn btn-sm btn-custom-accent w-100" onclick="openOrderModal('Stiker Vinyl Waterproof A3+', 'Rp 12.000 / lembar', 'Kertas A3+')">
+                                <i class="bi bi-cart me-1"></i> Pesan Bahan Ini
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- A3 Item 3: Art Carton 260gr -->
+                <div class="col-md-6 col-lg-3 product-card-item" data-title="cetak art carton 260gr poster kartu nama sertifikat buku menu a3">
+                    <div class="product-card h-100 shadow card-hover-effect">
+                        <div class="product-img-holder position-relative">
+                            <img src="images/ArtCarton.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=500&q=80';" alt="Art Carton 260gr" class="img-fluid w-100">
+                            <div class="img-placeholder-tag"><i class="bi bi-image"></i> Art Carton 260g</div>
+                            <span class="badge-price-tag">Rp 6.000 / lbr</span>
+                        </div>
+                        <div class="card-body p-3 text-white">
+                            <span class="badge bg-secondary mb-1">Karton Tebal Mengkilap</span>
+                            <h5 class="fw-bold mb-1">Art Carton 260gr A3+</h5>
+                            <p class="text-secondary small mb-2">
+                                Kertas tebal dan kaku dengan permukaan semi-glossy. Ideal untuk sertifikat, poster dinding, buku menu café, dan kartu ucapan.
+                            </p>
+                            <div class="bg-black p-2 rounded small mb-3 border border-secondary">
+                                <div class="d-flex justify-content-between">
+                                    <span class="text-muted">Cetak 1 Sisi:</span>
+                                    <strong class="text-white">Rp 6.000/lbr</strong>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span class="text-muted">Cetak Bolak-Balik:</span>
+                                    <strong class="text-danger">Rp 11.000/lbr</strong>
+                                </div>
+                            </div>
+                            <button class="btn btn-sm btn-custom-outline w-100" onclick="openOrderModal('Art Carton 260gr A3+', 'Rp 6.000 / lembar', 'Kertas A3+')">
+                                <i class="bi bi-cart me-1"></i> Pesan Bahan Ini
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- A3 Item 4: Stiker Transparan -->
+                <div class="col-md-6 col-lg-3 product-card-item" data-title="cetak stiker transparan bening tembus pandang kemasan botol">
+                    <div class="product-card h-100 shadow card-hover-effect">
+                        <div class="product-img-holder position-relative">
+                            <img src="images/StikerTransparan.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1607344645866-009c320b5ab8?auto=format&fit=crop&w=500&q=80';" alt="Stiker Transparan A3+" class="img-fluid w-100">
+                            <div class="img-placeholder-tag"><i class="bi bi-image"></i> Stiker Transparan</div>
+                            <span class="badge-price-tag">Rp 14.000 / lbr</span>
+                        </div>
+                        <div class="card-body p-3 text-white">
+                            <span class="badge bg-secondary mb-1">Bening Tembus Pandang</span>
+                            <h5 class="fw-bold mb-1">Stiker Transparan A3+</h5>
+                            <p class="text-secondary small mb-2">
+                                Stiker plastik bening yang menyatu estetik dengan wadah kaca transparan, pouch bening, atau botol kaca mewah.
+                            </p>
+                            <div class="bg-black p-2 rounded small mb-3 border border-secondary">
+                                <div class="d-flex justify-content-between">
+                                    <span class="text-muted">Cetak Saja:</span>
+                                    <strong class="text-white">Rp 14.000/lbr</strong>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span class="text-muted">+ Cutting Pola:</span>
+                                    <strong class="text-danger">+Rp 5.000/lbr</strong>
+                                </div>
+                            </div>
+                            <button class="btn btn-sm btn-custom-outline w-100" onclick="openOrderModal('Stiker Transparan A3+', 'Rp 14.000 / lembar', 'Kertas A3+')">
+                                <i class="bi bi-cart me-1"></i> Pesan Bahan Ini
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SEKSI 3: PERCETAKAN OUTDOOR & INDOOR KHUSUS
+         ========================================== -->
+    <section id="produk-outdoor-indoor" class="py-5 product-section reveal-scroll" data-category="outdoor-indoor">
+        <div class="container">
+            <div class="section-title-wrap mb-4">
+                <span class="badge bg-danger text-uppercase mb-2">Metode Cetak Khusus</span>
+                <h2 class="fw-bold text-white section-title">Percetakan Outdoor & Indoor</h2>
+                <div class="title-underline"></div>
+                <p class="text-secondary mt-2">
+                    Ketahui perbedaan metode cetak Outdoor (tahan hujan badai & terik matahari) vs Indoor (resolusi ultra-tajam tanpa bau menyengat untuk ruangan ber-AC).
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <!-- OUTDOOR COLUMN -->
+                <div class="col-lg-6 product-card-item" data-title="cetak outdoor spanduk baliho kain banner neon box">
+                    <div class="method-card outdoor-card p-4 h-100 rounded-4 card-hover-effect">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge bg-danger fs-6 px-3 py-2"><i class="bi bi-sun-fill me-1"></i> METODE OUTDOOR</span>
+                            <span class="text-muted small">Tinta Solvent Khusus</span>
+                        </div>
+                        <h4 class="fw-bold text-white mb-2">Cetak Luar Ruangan (Outdoor)</h4>
+                        <p class="text-secondary small mb-3">
+                            Diformulasikan untuk ketahanan cuaca tropis Manado. Menggunakan tinta solvent tahan air hujan, panas sinar UV, dan tidak mudah pudar dipandang dari jarak jauh.
+                        </p>
+
+                        <div class="method-img-box mb-3 position-relative rounded overflow-hidden">
+                            <img src="images/MesinOutdoor.jpg" alt="Cetak Outdoor" class="img-fluid rounded w-100" style="max-height: 240px; object-fit: cover;">
+                            <div class="img-placeholder-tag"><i class="bi bi-camera"></i> Mesin Cetak Outdoor</div>
+                        </div>
+
+                        <h6 class="fw-bold text-danger mb-2">Daftar Bahan & Tarif Outdoor:</h6>
+                        <div class="table-responsive">
+                            <table class="table table-dark table-sm table-striped small border border-secondary">
+                                <thead>
+                                    <tr>
+                                        <th>Jenis Bahan</th>
+                                        <th>Karakteristik</th>
+                                        <th>Harga / m²</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Flexi China 280g</td>
+                                        <td>Standar event jangka pendek</td>
+                                        <td class="text-danger fw-bold">Rp 18.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Flexi Higain 340g</td>
+                                        <td>Tebal, tahan angin sedang</td>
+                                        <td class="text-danger fw-bold">Rp 25.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Flexi Korea 440g</td>
+                                        <td>Tebal doff, awet 1-2 tahun</td>
+                                        <td class="text-danger fw-bold">Rp 45.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Backlite Outdoor</td>
+                                        <td>Bahan neon box tembus cahaya</td>
+                                        <td class="text-danger fw-bold">Rp 55.000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="mt-3 text-end">
+                            <button class="btn btn-custom-primary btn-sm" onclick="openOrderModal('Percetakan Outdoor', 'Mulai Rp 18.000/m²', 'Kategori Outdoor')">
+                                <i class="bi bi-cart me-1"></i> Order Outdoor
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INDOOR COLUMN -->
+                <div class="col-lg-6 product-card-item" data-title="cetak indoor albatros luster roll up banner x banner canvas backlite">
+                    <div class="method-card indoor-card p-4 h-100 rounded-4 card-hover-effect">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge bg-light text-dark fs-6 px-3 py-2"><i class="bi bi-building me-1"></i> METODE INDOOR</span>
+                            <span class="text-muted small">Tinta Eco-Solvent / UV High-DPI</span>
+                        </div>
+                        <h4 class="fw-bold text-white mb-2">Cetak Dalam Ruangan (Indoor)</h4>
+                        <p class="text-secondary small mb-3">
+                            Menghasilkan detail mikro yang super jernih tanpa bau menyengat. Sangat ideal untuk pameran mall, display kantor, foto galeri, roll up banner, dan seminar.
+                        </p>
+
+                        <div class="method-img-box mb-3 position-relative rounded overflow-hidden">
+                            <img src="images/MesinIndoor.jpg" alt="Cetak Indoor" class="img-fluid rounded w-100" style="max-height: 240px; object-fit: cover;">
+                            <div class="img-placeholder-tag"><i class="bi bi-camera"></i> Mesin Cetak Indoor Presisi</div>
+                        </div>
+
+                        <h6 class="fw-bold text-danger mb-2">Daftar Bahan & Tarif Indoor:</h6>
+                        <div class="table-responsive">
+                            <table class="table table-dark table-sm table-striped small border border-secondary">
+                                <thead>
+                                    <tr>
+                                        <th>Jenis Media</th>
+                                        <th>Karakteristik</th>
+                                        <th>Harga / m²</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Albatros + Laminasi</td>
+                                        <td>Halus, tidak melengkung (Roll Up)</td>
+                                        <td class="text-danger fw-bold">Rp 65.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Luster Paper</td>
+                                        <td>Permukaan kulit jeruk elegan</td>
+                                        <td class="text-danger fw-bold">Rp 75.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Backlite Film Indoor</td>
+                                        <td>Film display neon box bioskop</td>
+                                        <td class="text-danger fw-bold">Rp 90.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kanvas Lukis (Canvas)</td>
+                                        <td>Tekstur kanvas artistik</td>
+                                        <td class="text-danger fw-bold">Rp 120.000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="mt-3 text-end">
+                            <button class="btn btn-custom-accent btn-sm" onclick="openOrderModal('Percetakan Indoor', 'Mulai Rp 65.000/m²', 'Kategori Indoor')">
+                                <i class="bi bi-cart me-1"></i> Order Indoor
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         BANNER AJAKAN KALKULATOR
+         ========================================== -->
+    <section class="py-5 bg-dark-card border-top border-secondary text-center reveal-scroll">
+        <div class="container py-3">
+            <h3 class="text-white fw-bold mb-3">Mau Hitung Total Biaya Pesanan Anda?</h3>
+            <p class="text-secondary mx-auto mb-4" style="max-width: 600px;">
+                Cek langsung estimasi harga secara akurat dengan kalkulator online kami sebelum melakukan pemesanan.
+            </p>
+            <a href="kalkulator.html" class="btn btn-custom-accent btn-lg anim-pulse">
+                <i class="bi bi-calculator me-2"></i> Buka Kalkulator Estimasi Biaya
+            </a>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+    <footer class="footer-section bg-black text-white pt-5 pb-3 border-top border-danger">
+        <div class="container pb-4">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <span class="brand-badge">
+                            <img src="images/logo.png" alt="Sigma Printing Logo" class="footer-logo-img">
+                        </span>
+                        <div>
+                            <span class="brand-title">SIGMA<span class="text-danger">PRINTING</span></span>
+                            <span class="brand-subtitle d-block">MANADO - PAAL 2</span>
+                        </div>
+                    </div>
+                    <p class="text-secondary small mb-3">
+                        Pusat percetakan profesional terpercaya di Paal 2, Manado. Melayani cetak baliho, spanduk banner, kertas A3+ stiker, poster, dan media indoor-outdoor beresolusi tinggi dengan harga bersahabat.
+                    </p>
+                    <div class="d-flex gap-2">
+                        <a href="javascript:void(0)" onclick="showFormalityNotice('Facebook')" class="social-icon-btn" title="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="javascript:void(0)" onclick="showFormalityNotice('Instagram')" class="social-icon-btn" title="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="javascript:void(0)" onclick="showFormalityNotice('TikTok')" class="social-icon-btn" title="TikTok"><i class="bi bi-tiktok"></i></a>
+                        <a href="javascript:void(0)" onclick="showFormalityNotice('WhatsApp')" class="social-icon-btn" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="text-white fw-bold mb-3 border-bottom border-danger pb-2 d-inline-block">Navigasi Halaman</h6>
+                    <ul class="list-unstyled footer-links small">
+                        <li><a href="beranda.html"><i class="bi bi-chevron-right text-danger me-1"></i> Beranda</a></li>
+                        <li><a href="tentang.html"><i class="bi bi-chevron-right text-danger me-1"></i> Tentang Kami</a></li>
+                        <li><a href="produk.html"><i class="bi bi-chevron-right text-danger me-1"></i> Produk & Layanan</a></li>
+                        <li><a href="kalkulator.html"><i class="bi bi-chevron-right text-danger me-1"></i> Hitung Biaya</a></li>
+                        <li><a href="kontak.html"><i class="bi bi-chevron-right text-danger me-1"></i> Kontak & Lokasi</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="text-white fw-bold mb-3 border-bottom border-danger pb-2 d-inline-block">Katalog Produk</h6>
+                    <ul class="list-unstyled footer-links small">
+                        <li><a href="#produk-baliho"><i class="bi bi-chevron-right text-danger me-1"></i> Cetak Baliho Flexi 280g/340g</a></li>
+                        <li><a href="#produk-baliho"><i class="bi bi-chevron-right text-danger me-1"></i> Baliho Tebal Flexi Korea 440g</a></li>
+                        <li><a href="#produk-kertas-a3"><i class="bi bi-chevron-right text-danger me-1"></i> Stiker Vinyl Waterproof A3+</a></li>
+                        <li><a href="#produk-kertas-a3"><i class="bi bi-chevron-right text-danger me-1"></i> Stiker Cromo Glossy A3+</a></li>
+                        <li><a href="#produk-outdoor-indoor"><i class="bi bi-chevron-right text-danger me-1"></i> Cetak Roll-Up & X-Banner</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="text-white fw-bold mb-3 border-bottom border-danger pb-2 d-inline-block">Workshop Kami</h6>
+                    <ul class="list-unstyled small text-secondary">
+                        <li class="mb-2"><i class="bi bi-geo-alt-fill text-danger me-2"></i> Paal 2, Kota Manado, Sulawesi Utara</li>
+                        <li class="mb-2"><i class="bi bi-clock-fill text-danger me-2"></i> Senin - Sabtu: 09.00 - 19.00 WITA</li>
+                        <li class="mb-2"><i class="bi bi-telephone-fill text-danger me-2"></i> +62 852-9876-5432</li>
+                        <li><i class="bi bi-envelope-fill text-danger me-2"></i> info@sigmaprinting.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom border-top border-secondary pt-3 text-center text-secondary small">
+            <div class="container">
+                <p class="mb-1">&copy; 2026 <strong>Sigma Printing Manado (Paal 2)</strong>. Hak Cipta Dilindungi.</p>
+                <p class="mb-0 text-muted">
+                    Projek Final Web Design oleh <strong>Lontoh, Josua Hansen</strong> (NIM: 105022510007) • Dosen Pengajar: <strong>Sir Wilsen Mokodaser</strong>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL ORDER FORM -->
+    <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white border border-danger">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title fw-bold" id="orderModalLabel">
+                        <i class="bi bi-cart-check text-danger me-2"></i>Form Pemesanan Cepat
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label small text-secondary">Produk yang Dipilih:</label>
+                        <input type="text" id="modalProductName" class="form-control form-control-custom" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label small text-secondary">Estimasi Harga Satuan:</label>
+                        <input type="text" id="modalProductPrice" class="form-control form-control-custom" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label small text-secondary">Nama Anda / Perusahaan:</label>
+                        <input type="text" id="modalCustomerName" class="form-control form-control-custom" placeholder="Contoh: Bpk. Ronald">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label small text-secondary">Ukuran / Jumlah Lembar:</label>
+                        <input type="text" id="modalOrderSpecs" class="form-control form-control-custom" placeholder="Contoh: 3x1 meter atau 20 lembar A3">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label small text-secondary">Status Desain Grafis:</label>
+                        <select id="modalDesignOption" class="form-select form-select-custom">
+                            <option value="Sudah ada file siap cetak">Sudah ada file siap cetak</option>
+                            <option value="Butuh dibuatkan desain (Simpel)">Butuh dibuatkan desain (Simpel)</option>
+                            <option value="Butuh dibuatkan desain (Custom Full)">Butuh dibuatkan desain (Custom Full)</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label small text-secondary">Catatan Tambahan (Opsional):</label>
+                        <textarea id="modalOrderNotes" class="form-control form-control-custom" rows="2" placeholder="Catatan bahan, finishing mata ayam, atau request khusus..."></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer border-secondary">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Tutup</button>
+                    <button type="button" class="btn btn-custom-accent btn-sm" onclick="submitModalOrder()">
+                        <i class="bi bi-whatsapp me-1"></i> Kirim Pesanan ke WA
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL FORMALITAS -->
+    <div class="modal fade" id="formalityNoticeModal" tabindex="-1" aria-labelledby="formalityModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white border border-danger shadow-lg">
+                <div class="modal-header border-secondary pb-2">
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="bi bi-info-circle-fill text-danger fs-5"></i>
+                        <h5 class="modal-title fw-bold" id="formalityModalLabel">Informasi Sistem</h5>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center py-4">
+                    <div class="notice-icon-circle mx-auto mb-3">
+                        <i class="bi bi-shield-exclamation text-danger"></i>
+                    </div>
+                    <h5 class="fw-bold text-white mb-2" id="formalityNoticeTitle">Fitur Hanya untuk Formalitas</h5>
+                    <p class="text-secondary small px-3 mb-0" id="formalityNoticeDesc">
+                        Tautan ini dibuat untuk kelengkapan formalitas demonstrasi projek web design.
+                    </p>
+                </div>
+                <div class="modal-footer border-secondary justify-content-center">
+                    <button type="button" class="btn btn-custom-primary btn-sm px-4" data-bs-dismiss="modal">
+                        <i class="bi bi-check2-circle me-1"></i> Saya Mengerti
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL CERITA PEMBUAT -->
+    <div class="modal fade" id="creatorStoryModal" tabindex="-1" aria-labelledby="creatorStoryLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content creator-chat-modal text-white">
+                <div class="modal-header chat-modal-header border-secondary">
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="chat-avatar-creator"><i class="bi bi-person-fill"></i></div>
+                        <div>
+                            <h5 class="modal-title fw-bold mb-0 text-white" id="creatorStoryLabel">
+                                Cerita Pembuat Website <span class="badge bg-danger ms-1">Josua Hansen Lontoh</span>
+                            </h5>
+                            <small class="text-secondary">NIM: 105022510007 • Kelas Web Design • Sir Wilsen Mokodaser</small>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body chat-modal-body py-4">
+                    <div class="chat-bubble-row">
+                        <div class="chat-avatar-mini">JH</div>
+                        <div class="chat-bubble shadow-sm">
+                            <div class="chat-bubble-author text-danger fw-bold small mb-1">
+                                <i class="bi bi-mortarboard-fill me-1"></i> Latar Belakang & Identitas Pembuat
+                            </div>
+                            <p class="mb-0">
+                                Halo semuanya! Perkenalkan, saya <strong>Lontoh, Josua Hansen</strong> dengan NIM <strong>105022510007</strong>. Website ini dirancang dan dibangun sebagai <strong>Projek Final mata kuliah Web Design</strong> yang diampu oleh dosen pengajar <strong>Sir Wilsen Mokodaser</strong>.
+                            </p>
+                            <span class="chat-timestamp">Tujuan Projek Final</span>
+                        </div>
+                    </div>
+
+                    <div class="chat-bubble-row">
+                        <div class="chat-avatar-mini">JH</div>
+                        <div class="chat-bubble shadow-sm">
+                            <div class="chat-bubble-author text-danger fw-bold small mb-1">
+                                <i class="bi bi-brush-fill me-1"></i> Jejak Langkah dari Siswa SMK DKV
+                            </div>
+                            <p class="mb-0">
+                                Sebelum melanjutkan studi di perguruan tinggi, saya adalah siswa SMK dengan latar belakang kelulusan jurusan <strong>Desain Komunikasi Visual (DKV)</strong>. Di masa sekolah tersebut, saat menjalani program <strong>Praktek Kerja Lapangan (PKL)</strong>, saya mendapatkan kesempatan berharga untuk ditempatkan, mencari ilmu, dan menimba pengalaman nyata langsung di perusahaan percetakan ternama: <strong>Sigma Digital Printing</strong> yang berlokasi di Paal 2, Manado.
+                            </p>
+                            <span class="chat-timestamp">Pengalaman Nyata</span>
+                        </div>
+                    </div>
+
+                    <div class="chat-bubble-row">
+                        <div class="chat-avatar-mini">JH</div>
+                        <div class="chat-bubble shadow-sm">
+                            <div class="chat-bubble-author text-danger fw-bold small mb-1">
+                                <i class="bi bi-lightbulb-fill me-1"></i> Alasan Memilih Tema Sigma Digital Printing
+                            </div>
+                            <p class="mb-1">
+                                Di Sigma Digital Printing, mata saya benar-benar terbuka lebar melihat bagaimana industri kreatif percetakan bekerja: dari proses cetak baliho raksasa, presisi digital offset lembaran A3+, stiker kemasan produk, hingga berbagai media promosi indoor dan outdoor.
+                            </p>
+                            <p class="mb-0">
+                                Saya membuat website ini karena menurut saya <strong>sangat keren dan bermakna jika saya membuat website dari tempat yang sudah berjasa membantu saya untuk mengenal dan merasakan langsung dunia kerja untuk pertama kalinya!</strong> 🚀
+                            </p>
+                            <span class="chat-timestamp">Inspirasi & Makna</span>
+                        </div>
+                    </div>
+
+                    <div class="chat-bubble-row">
+                        <div class="chat-avatar-mini">JH</div>
+                        <div class="chat-bubble shadow-sm highlight-bubble">
+                            <div class="chat-bubble-author text-danger fw-bold small mb-1">
+                                <i class="bi bi-award-fill me-1"></i> Dedikasi & Terima Kasih untuk Sir Wilsen
+                            </div>
+                            <p class="mb-1">
+                                Melalui website ini, saya menggabungkan fondasi estetika visual yang saya pelajari dari SMK DKV dengan keterampilan pemrograman web modern (HTML5, Bootstrap 5, styling CSS Merah-Hitam-Putih yang elegan, dan fitur interaktif JavaScript seperti kalkulator cetak dan pencarian produk).
+                            </p>
+                            <p class="mb-0">
+                                Terima kasih yang sebesar-besarnya saya ucapkan kepada <strong>Sir Wilsen Mokodaser</strong> atas segala bimbingan, arahan, dan ilmu yang sangat bermanfaat selama perkuliahan Web Design ini. Semoga karya ini dapat memberikan hasil terbaik dan bermanfaat! 🙏✨
+                            </p>
+                            <span class="chat-timestamp">Lontoh, Josua Hansen • NIM 105022510007</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer border-secondary justify-content-between">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">
+                        <i class="bi bi-x-lg me-1"></i> Tutup Pesan
+                    </button>
+                    <a href="kalkulator.html" class="btn btn-custom-accent btn-sm">
+                        <i class="bi bi-calculator me-1"></i> Hitung Estimasi Biaya
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Buttons -->
+    <button id="floatingStoryBtn" class="floating-story-btn shadow" aria-label="Cerita Pembuat Website" onclick="openCreatorStory()" title="Cerita di Balik Website - Josua Hansen Lontoh">
+        <div class="story-avatar-icon"><i class="bi bi-chat-quote-fill"></i></div>
+        <span class="story-btn-label d-none d-sm-inline">Cerita Pembuat Web</span>
+    </button>
+
+    <a href="javascript:void(0)" onclick="showFormalityNotice('WhatsApp')" class="floating-wa shadow" aria-label="WhatsApp Sigma Printing">
+        <i class="bi bi-whatsapp"></i>
+        <span class="floating-tooltip">Chat WA Kami</span>
+    </a>
+
+    <button id="backToTopBtn" class="floating-top shadow" aria-label="Kembali ke atas" onclick="scrollToTop()">
+        <i class="bi bi-chevron-up"></i>
+    </button>
+
+    <!-- Bootstrap 5 Bundle JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
